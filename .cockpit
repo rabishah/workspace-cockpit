@@ -1,0 +1,12 @@
+#!bin/bash
+
+microsite=(
+  "vim:cd ~/project/documentation/microsite;vim"
+  "gulp:cd ~/project/documentation/microsite;gulp load --client hrsummit"
+  "commander:cd ~/project/documentation/microsite"
+)
+
+vplayer=(
+  "vim:cd ~/Vicious/player;vim"
+  "commander:cd ~/Vicious/player"
+)
