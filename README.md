@@ -1,9 +1,12 @@
-#Cockpit
-###Pimping developer terminal workspace
-#### by, Vicious Team
-===
+###Cockpit
+####Pimping developer terminal workspace
+##### by, Vicious Team
+====
 
 Workspace script to execute commands in multiple tabs
+
+### Installing Cockpit
+`bash install.sh`
 
 ### Configuring your cockpit
 Edit `*~/.cockpit` the configuration file to create cockpits. The cockpit in the config
@@ -30,3 +33,6 @@ file is a array of tab name and command to execute in the tab
     "server:cd ~/personal/project;supervisor app.js"
   )
 ```
+
+### Load cockpit configuration
+`cockpit.sh load work`

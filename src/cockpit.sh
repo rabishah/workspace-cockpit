@@ -22,10 +22,13 @@ COMMANDS=(
   '-h:helper'
   'help:helper'
   'load:loadCockpit'
+  'init:createFile'
 )
 
 helper() {
-  echo "cockpit load"
+  echo "Start creating cockpits."
+  echo -e "\tcockpit init - to create new config file."
+  echo -e "\tcockpit load <cockpit-name> - to load cockpit."
 }
 
 parseConfig() {
@@ -42,7 +45,7 @@ parseConfig() {
 
     execute+=($fullscreen $tab --title="${tabName}" -e "bash -c '$tabCmd';bash")
   done
- echo ${#execute[@]} 
+  
   if [ ${#execute[@]} -eq 1 ]
   then
     fault=1;
@@ -60,10 +63,15 @@ loadCockpit() {
     exit 0
   fi
 
- . $CONFIG
- config=${args[1]}
-  
+  . $CONFIG
+  config=${args[1]}
+
   parseConfig
+}
+
+createFile() {
+  echo "" >> ${CONFIG}
+  helper
 }
 
 fault=0;
