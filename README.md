@@ -12,6 +12,7 @@ Workspace script to execute commands in multiple tabs
 Edit `*~/.cockpit` the configuration file to create cockpits. The cockpit in the config
 file is a array of tab name and command to execute in the tab
 
+Syntax:
 ```
   cockpit_name=(
     "tab_name:command_0;command_1;command_n"
@@ -19,6 +20,7 @@ file is a array of tab name and command to execute in the tab
   )
 ``` 
 
+Example:
 ```
   #!/bin/bash
 
